@@ -12,6 +12,10 @@ use quote::ToTokens;
 decl_derive!([Token, attributes(expr, skip)] => token_derive);
 
 fn token_derive(s: synstructure::Structure) -> quote::Tokens {
+    match s.ast().body {
+        syn::Body::Struct(_) => panic!("#[derive(Token)] only works on Enums"),
+        _ => {}
+    };
     let exprs: Vec<_> = s.variants().iter().map(|v| check_regex(&v.ast())).collect();
     let ids: Vec<_> = s.variants().iter().map(|v| v.ast().ident).collect();
     let re_ids: Vec<_> = ids.iter().map(|i| syn::Ident::new(format!("RE_{}",i.as_ref()))).collect();
