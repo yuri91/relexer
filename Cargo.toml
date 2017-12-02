@@ -1,12 +1,12 @@
 [package]
 authors = ["Yuri Iozzelli <y.iozzelli@gmail.com>"]
 name = "relexer"
+description = "A simple lexer powered by custom derive"
+license = "MIT"
 version = "0.1.0"
 
 [dependencies]
 failure = "0.1.1"
 lazy_static = "1.0.0"
 regex = "0.2.3"
-
-[dependencies.relexer-derive]
-path = "./relexer-derive"
+relexer-derive = "0.1"

@@ -1,6 +1,8 @@
 [package]
 authors = ["Yuri Iozzelli <y.iozzelli@gmail.com>"]
 name = "relexer-derive"
+description = "A simple lexer powered by custom derive. Macro implementation crate"
+license = "MIT"
 version = "0.1.0"
 
 [dependencies]
