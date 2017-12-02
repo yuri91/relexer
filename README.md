@@ -1,3 +1,11 @@
+# Relexer
+
+A simple and easy to use lexer for rust. Powered by custom derive
+
+## Example
+
+```
+
 #[macro_use]
 extern crate relexer;
 
@@ -27,3 +35,4 @@ fn main() {
         println!("{:?}", t)
     }
 }
+```
